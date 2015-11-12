@@ -1,0 +1,3 @@
+[submodule "odata_svc"]
+	path = odata_svc
+	url = https://github.com/maxromanov/asp-odata-sql.git
