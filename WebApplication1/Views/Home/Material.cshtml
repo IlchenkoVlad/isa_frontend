@@ -1,0 +1,53 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Material</title>
+    <link rel="stylesheet" href="~/Content/css/reset.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="~/Content/css/light.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="~/Content/css/dark.css" type="text/css" media="screen" />
+    <script type="text/javascript" src="~/Content/js/jquery-1.4.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.easing.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/jquery.lavalamp.min.js"></script>
+    <script type="text/javascript" src="~/Content/js/cufon.yui.js"></script>
+    <script type="text/javascript" src="~/Content/js/myriad.js"></script>
+    <script type="text/javascript">
+		$(function() {
+			 $("#one,#two,#three,#four,#five,#six,#seven,#eight").lavaLamp({
+				fx: "backout",
+				speed: 700,
+				click: function(event, menuItem) {
+					return false;
+				}
+			 });
+		});
+    </script>
+    <script type="text/javascript">
+
+		Cufon.replace('li a', {hover: true,});
+
+    </script>
+</head>
+<body>
+    <div class="darkmenu">
+        <ul class="darkBlue" id="five">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li class="current"><a href="#">Contact</a></li>
+            <li><a href="#">News</a></li>
+        </ul>
+        <div class="searchbox">
+            <form method="get" action="">
+                <input type="text" value="" onfocus="doClear(this)" name="s" class="darksearch" />
+            </form>
+        </div>
+    </div>
+</body>
+</html>

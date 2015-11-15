@@ -1,0 +1,182 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html lang="ru" class="lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="ru" class="lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="ru" class="lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+<html lang="ru">
+<!--<![endif]-->
+<head>
+    
+    <meta charset="utf-8" />
+    <title>Site</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <!--JS TREE><!-->
+    <link rel="stylesheet" href="~/Content/jstree/dist/themes/default/style.css"/>
+    <!--JS TREE><!-->
+    <link rel="stylesheet" href="~/Content/libs/bootstrap/bootstrap-grid-3.3.1.min.css" />
+    <link rel="stylesheet" href="~/Content/libs/font-awesome-4.2.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="~/Content/libs/fancybox/jquery.fancybox.css" />
+    <link rel="stylesheet" href="~/Content/libs/owl-carousel/owl.carousel.css" />
+    <link rel="stylesheet" href="~/Content/libs/countdown/jquery.countdown.css" />
+    <link rel="stylesheet" href="~/Content/css/fonts.css" />
+    <link rel="stylesheet" href="~/Content/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/Content/css/main.css" />
+    <link rel="stylesheet" href="~/Content/css/media.css" />
+    <link rel="stylesheet" href="~/Content/css/styles.css" />
+</head>
+<body>
+    <header class="top_header">
+        <div class="header_topline">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <button class="auth_buttons hidden-md hidden-lg hidden-sm"><i class="fa fa-user"></i></button>
+                        <div class="top_links">
+                            <a id="inp">User #123</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="nav">
+                        <ul class="fancyNav">
+                            <li id="home"><a href="#home" class="homeIcon">Home</a></li>
+                            <li id="news"><a href="#mat">Материалы</a></li>
+                            <li id="about"><a href="#about">Операции</a></li>
+                            <li id="services"><a href="#services">Транспорт внутренний</a></li>
+                            <li id="contact"><a href="#contact">Транспорт внешний</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="order">
+        
+        @*<div class="container">
+            <div class="row" style="padding-bottom:0;">
+                <div class="col-md-4">
+                    <!--<div id="poisk">
+                        <input type="text" />
+                    </div> -->
+                    <div>
+                        <span>Material class</span>
+                        <input type="text" id="search_tree" placeholder="Search" />
+                    </div>
+                    <div id="js-tree">
+
+
+                    </div><!-- /multi-derevo -->
+                </div>
+                <div class="col-md-8">
+                    <div class="tabs">
+                        <input id="tab1" type="radio" name="tabs" checked>
+                        <label for="tab1" title="Вкладка 1">Material Class Property</label>
+
+                        <input id="tab2" type="radio" name="tabs">
+                        <label for="tab2" title="Вкладка 2">Material Definition</label>
+
+                        <input id="tab3" type="radio" name="tabs">
+                        <label for="tab3" title="Вкладка 3">Assembly</label>
+
+                        <section id="content1">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Description</th>
+                                            <th>Value</th>
+                                            <th>Material Test Specification</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section id="content2">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Description</th>
+                                            <th>Material Test Specification</th>
+                                            <th>Assembly Definition ID</th>
+                                            <th>Assembly Type</th>
+                                            <th>Assembly Relationship</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </section>
+                        <section id="content3">
+                            <p>
+                                Assembly
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+    </section>
+
+    <section class="header_topline">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div style="text-align:center; cursor:pointer;" id="tes">Выход</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="hidden">
+        <form id="log" class="pop_form">
+            <h3>Подождите идет загрузка...</h3>
+            <img src="~/Content/img/0038.gif" />
+        </form>
+    </div>
+    <div style="display:none">
+        <div id="notserch" class="pop_form">
+            <h3>Совпадений не найдено!!!</h3>
+        </div>
+    </div>
+    <!--[if lt IE 9]>
+    <script src="libs/html5shiv/es5-shim.min.js"></script>
+    <script src="libs/html5shiv/html5shiv.min.js"></script>
+    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+    <script src="libs/respond/respond.min.js"></script>
+    <![endif]-->
+    <script src="~/Content/js/bootstrap.js"></script>
+
+    <script src="~/Content/js/request.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/libs/jquery/jquery-1.11.1.min.js"></script>
+    <script src="~/Content/jstree/dist/jstree.js"></script>
+    <script src="~/Content/libs/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+    <script src="~/Content/libs/fancybox/jquery.fancybox.pack.js"></script>
+    <script src="~/Content/libs/waypoints/waypoints-1.6.2.min.js"></script>
+    <script src="~/Content/libs/scrollto/jquery.scrollTo.min.js"></script>
+    <script src="~/Content/libs/owl-carousel/owl.carousel.min.js"></script>
+    <script src="~/Content/libs/countdown/jquery.plugin.js"></script>
+    <script src="~/Content/libs/countdown/jquery.countdown.min.js"></script>
+    <script src="~/Content/libs/countdown/jquery.countdown-ru.js"></script>
+    <script src="~/Content/libs/landing-nav/navigation.js"></script>
+    <script src="~/Content/js/common.js"></script>
+
+</body>
+</html>
